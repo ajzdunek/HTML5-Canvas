@@ -1,3 +1,6 @@
+// Boilerplate for animations
+
+
 window.onload = function () {
 
     const canvas = document.getElementById('animations-starting-point')
@@ -8,4 +11,23 @@ window.onload = function () {
 
 
 
-}
+
+
+
+
+
+
+
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               window.msRequestAnimationFrame ||
+               function(callback){
+               window.setTimeout(callback, 1000 / 60)
+        };
+    
+    
+    })();
+
+};
